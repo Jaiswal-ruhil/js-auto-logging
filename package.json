@@ -1,0 +1,21 @@
+{
+  "name": "auto-logging",
+  "version": "1.0.0",
+  "description": "logger as a decorator using es2017",
+  "main": "auto-logging.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2017": "^6.24.1",
+    "decorator-wrap": "^1.2.4",
+    "logger": "0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "babel --presets es2017 --plugins transform-decorators-legacy auto-logging.js > bundle.js",
+    "test": "babel --presets es2017 --plugins transform-decorators-legacy ./test/test.js > ./test/bundle.js && node ./test/bundle.js"
+  },
+  "author": "Ruhil Jaiswal <ruhiljaiswal@gmail.com>",
+  "license": "ISC"
+}
