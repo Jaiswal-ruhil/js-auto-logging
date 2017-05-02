@@ -1,5 +1,6 @@
 
 let logmethod = require('../auto-logging.js').logmethod;
+let logfunction = require('../auto-logging.js').logfunction;
 
 class SuperNiceClass {
     constructor(){
@@ -16,6 +17,13 @@ class SuperNiceClass {
     }
 }
 
+sum = logfunction(function sum(num1, num2) {
+    return num1 + num2
+})
+
 x = new SuperNiceClass()
 x.bar(1,2);
 x.bar(1,2);
+
+console.log(sum(2,3))
+console.log(sum(2,3))

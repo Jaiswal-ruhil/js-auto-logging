@@ -5,7 +5,7 @@ logging using decorators
 
 ## Api :
 ```js
-let logmethod = require('auto-logging').logmethod;
+import {logmethod, logfunction} from 'auto-logging';
 
 class SuperNiceClass {
     constructor(){
@@ -22,7 +22,14 @@ class SuperNiceClass {
     }
 }
 
-x = new SuperNiceClass()
-x.bar(1,2);
-x.bar(1,2);
+sum = logfunction(function sum(num1, num2) {
+    return num1 + num2
+})
+
+foo = new SuperNiceClass()
+foo.bar(1,2);
+foo.bar(1,2);
+
+sum(2,3)
+sum(5,9999)
 ```
